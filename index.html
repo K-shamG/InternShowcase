@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GOAL 17</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<div class="parallax">
+		<body>
+			<header class="container">
+				<div class="row">
+				<nav class="col-sm-8 text-left">
+					<a href="http://17goals.org/"target="_blank" style="color:white"><p>About The Goals<p></a>
+					<a href="contact.html"style="color:white"><p>Contact</p></a>
+				</nav>
+				</div>
+			</header>
+			<section class="jumbotron">
+				<div class="slider-holder">
+				        <span id="slider-image-1"></span>
+				        <span id="slider-image-2"></span>
+				        <span id="slider-image-3"></span>
+				        <div class="image-holder">
+				            <img src="header.jpg" class="slider-image" />
+				            <img src="background.jpg" class="slider-image" />
+				        </div>
+				        <div class="button-holder">
+				            <a href="#slider-image-1" class="slider-change"></a>
+				            <a href="#slider-image-2" class="slider-change"></a>
+				            <a href="#slider-image-3" class="slider-change"></a>
+				        </div>
+				    </div>
+				<div class= "container">
+				</div>
+			</section>
+			<section class="container">
+			    <h3>Step 1: Choose a goal</h3>
+				<div class="row">
+					<figure class="col-sm-3"><img src="goal1.jpg"/></figure>
+					<figure class="col-sm-3"><img src="goal2.jpg"/></figure>
+					<figure class="col-sm-3"><img src="goal3.png"/></figure>
+					<figure class="col-sm-3"><img src="goal4.jpg"/></figure>
+					<figure class="col-sm-3">
+						<script type="text/javascript">
+							function scrollToMap() {
+								document.querySelector('#map').scrollIntoView({
+									behavior: 'smooth'
+								});
+							}
+						</script>
+					 	<img src="goal5.png" onclick="scrollToMap()"/>
+					</figure>
+					<figure class="col-sm-3"><img src="goal6.png"/></figure>
+					<figure class="col-sm-3"><img src="goal7.png"/></figure>
+					<figure class="col-sm-3"><img src="goal8.png"/></figure>
+					<figure class="col-sm-3"><img src="goal9.png"/></figure>
+					<figure class="col-sm-3"><img src="goal10.png"/></figure>
+					<figure class="col-sm-3"><img src="goal11.png"/></figure>
+					<figure class="col-sm-3"><img src="goal12.png"/></figure>
+				    <figure class="col-sm-3"><img src="goal13.png"/></figure>
+					<figure class="col-sm-3"><img src="goal14.png"/></figure>
+					<figure class="col-sm-3"><img src="goal15.jpg"/></figure>
+					<figure class="col-sm-3"><img src="goal16.png"/></figure>
+				 </div> 
+			</section>
+			<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+			<div id="map">
+				<h3>Step 2: Pick a location you'd like to help</h3>
+				<script type="text/javascript">
+				  var map;
+
+				  function initialize() {
+					var myOptions = {
+					  zoom: 2,
+					  center: new google.maps.LatLng(10, 0),
+					  //mapTypeId: google.maps.MapTypeId.ROADMAP
+					  mapTypeId: google.maps.MapTypeId.SATELLITE 
+					};
+
+					// initialize the map
+					map = new google.maps.Map(document.getElementById('map-canvas'),  myOptions);
+
+					// these are the map styles
+					var styles = [
+						{
+						  stylers: [
+							{ hue: "#00ffe6" },
+							{ saturation: -20 }
+						  ]
+						},
+						{
+						  featureType: "landscape",
+						  stylers: [
+							{ hue: "#ffff66" },
+							{ saturation: 100 }
+						  ]
+						},{
+						  featureType: "road",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "administrative.land_parcel",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "administrative.locality",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "administrative.neighborhood",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "administrative.province",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "landscape.man_made",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "landscape.natural",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "poi",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						},{
+						  featureType: "transit",
+						  stylers: [
+							{ visibility: "off" }
+						  ]
+						}
+					  ];
+
+					map.setOptions({styles: styles});
+					map.setOptions({minZoom: 1, maxZoom: 5}); 
+
+					// Initialize JSONP request
+					var script = document.createElement('script');
+					var url = ['https://www.googleapis.com/fusiontables/v1/query?'];
+					url.push('sql=');
+					var query = 'SELECT name, kml_4326 FROM ' +
+						'1foc3xO9DyfSIF6ofvN0kp2bxSfSeKog5FbdWdQ';
+					var encodedQuery = encodeURIComponent(query);
+					url.push(encodedQuery);
+					url.push('&callback=drawMap');
+					url.push('&key=AIzaSyAm9yWCV7JPCTHCJut8whOjARd7pwROFDQ');
+					script.src = url.join('');
+					var body = document.getElementsByTagName('body')[0];
+					body.appendChild(script);
+				  }
+
+				  function drawMap(data) {
+					var rows = data['rows'];
+					for (var i in rows) {
+					  if (rows[i][0] != 'Antarctica') {
+						var newCoordinates = [];
+						var geometries = rows[i][1]['geometries'];
+						if (geometries) {
+						  for (var j in geometries) {
+							newCoordinates.push(constructNewCoordinates(geometries[j]));
+						  }
+						} else {
+						  newCoordinates = constructNewCoordinates(rows[i][1]['geometry']);
+						}
+						var country = new google.maps.Polygon({
+						  paths: newCoordinates,
+						  strokeColor: '#ff9900',
+						  strokeOpacity: 1,
+						  strokeWeight: 0.3,
+						  fillColor: '#ffff66',
+						  fillOpacity: 0,
+						  name: rows[i][0]
+						});
+						google.maps.event.addListener(country, 'mouseover', function() {
+						  this.setOptions({fillOpacity: 0.4});
+						});
+						google.maps.event.addListener(country, 'mouseout', function() {
+						  this.setOptions({fillOpacity: 0});
+						});
+						google.maps.event.addListener(country, 'click', function() {
+						  //alert(this.name);
+						  window.open("about.html"); 			<!-- OPEN LINK --> 
+						});
+
+						country.setMap(map);
+					  }
+					}
+				  }
+
+				  function constructNewCoordinates(polygon) {
+					var newCoordinates = [];
+					var coordinates = polygon['coordinates'][0];
+					for (var i in coordinates) {
+					  newCoordinates.push(
+						  new google.maps.LatLng(coordinates[i][1], coordinates[i][0]));
+					}
+					return newCoordinates;
+				  }
+
+				  google.maps.event.addDomListener(window, 'load', initialize);
+				</script>
+			</div>
+			<div id="map-canvas"></div>	
+			<footer class="container">
+			  <div class="row">
+				<p class="col-sm-10">&copy; 2017 Integra</p>
+				<ul class="col-sm-2">
+				  <li class="col-sm-3">
+					<a href="www.twitter.com"/>
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/twitter.svg">
+					</a>
+				  </li>
+				  <li class="col-sm-3">
+					<a href="www.facebook.com"/>
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">	
+					</a>
+				  </li>
+				  <li class="col-sm-3">
+					<a href="www.instagram.com"/>
+						<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/instagram.svg">
+					</a>
+				  </li>
+				</ul>
+		      </div>
+		    </footer>
+		</body>
+	</div>
+</html>

@@ -1,0 +1,191 @@
+.parallax {
+    background-image: url("backgroun.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #c8d9de;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+    font-color: #ffffff;
+}
+
+header h1 {
+  font-weight: 400;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+header a {
+  color: white;
+  font-size: 22px;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+/*  background-image: url('header.jpg'); 
+  background-size: auto; 
+  background-repeat: no-repeat;*/
+  color: black;
+  height: 250px;
+}
+
+.jumbotron h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+.jumbotron img{
+  width:100%;
+  height:100%;
+}
+
+.slider-holder
+{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-holder
+{
+    width: 2400px;
+    background-color: red;
+    height: 400px;
+    clear: both;
+    position: relative;
+   
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slider-image
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#slider-image-1:target ~ .image-holder
+{
+    left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder
+{
+    left: -800px;
+}
+
+#slider-image-3:target ~ .image-holder
+{
+    left: -1600px;
+}
+
+.button-holder
+{
+    position: relative;
+    top: -20px;
+}
+
+.slider-change
+{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: brown;
+}
+
+/* Interested in helping */
+.container h3 {
+	font-family: Impact;
+	font-size: 35px; 
+}
+
+/* 16 goal images */
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+  box-shadow: 5px 5px 15px black;
+}
+
+section .row img:hover
+{
+  -webkit-filter: brightness(60%); 
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+#map h3 {
+	font-family: Impact;
+	font-size: 35px;
+	padding-left: 50px; 
+	margin-top: 2000px; 
+}
+
+#map-canvas {
+	height: 600px;
+    width: 800px;
+	margin:0 auto; 
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0; 
+}
+
+footer .col-sm-10 {
+  display: flex;
+  justify-content: left;
+  font-size: 20px; 
+}
+
+footer ul {
+  list-style: none; 
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
