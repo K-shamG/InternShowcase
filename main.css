@@ -21,7 +21,6 @@ header .row,
 footer .row {
   display: flex;
   align-items: center;
-    font-color: #ffffff;
 }
 
 header h1 {
