@@ -1,0 +1,28 @@
+.parallax {
+    background-image:  url("http://17goals.org/wp-content/uploads/2015/09/17peaks.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background-image: url("http://17goals.org/wp-content/uploads/2015/09/17peaks.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#about h1 {
+	color: white;
+	padding: 20px;
+}
+
+#about p {
+	color: white;
+	font-size: 20px;
+	padding: 10px 20px;
+}
