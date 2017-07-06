@@ -13,7 +13,7 @@ body {
 
 .info {
 	/*background-color: white;*/
-	padding: 50px;
+	padding: 50px 100px;
 }
 
 h1 {
@@ -41,8 +41,8 @@ h2 img {
 }
 
 button.accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: black;
+    color: white;
     cursor: pointer;
     padding: 20px;
     width: 100%;
@@ -54,12 +54,12 @@ button.accordion {
 }
 
 button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
+    background-color: #16216a;
 }
 
 div.panel {
     padding: 0 20px;
-    background-color: white;
+    background-color: black;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -68,6 +68,15 @@ div.panel {
 div.panel p {
 	padding: 20px;
 	font-size: 18px;
+	color: white;
+}
+
+div.panel ul {
+	color: white;
+}
+
+div.panel h3 {
+	color: white;
 }
 
 div.panel img {
