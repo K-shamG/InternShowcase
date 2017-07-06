@@ -1,5 +1,5 @@
 .parallax {
-    background-image: url("http://17goals.org/wp-content/uploads/2015/09/17peaks.jpg");
+    background-image: url("images/backgroun.jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -125,7 +125,7 @@ footer .col-sm-10 {
   color: white;
   margin: auto;
   text-align: center;
-  padding: 10px;
+  padding: 01px;
 }
 
 footer ul {
