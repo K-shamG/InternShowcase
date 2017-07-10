@@ -5,6 +5,7 @@
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<script src="https://use.fontawesome.com/35264218fe.js"></script> <!-- for scroll up button -->
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<div class="parallax">
@@ -198,6 +199,28 @@
 				</script>
 			</div>
 			<div id="map-canvas"></div>	
+			
+			<a onclick="topFunction()" id="myBtn" href="#">
+				<i class="fa fa-chevron-up" ></i>
+			</a>
+			<script>
+				window.onscroll = function() {scrollFunction()};
+
+				function scrollFunction() {
+				    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				        document.getElementById("myBtn").style.display = "block";
+				    } else {
+				        document.getElementById("myBtn").style.display = "none";
+				    }
+				}
+
+				// When the user clicks on the button, scroll to the top of the document
+				function topFunction() {
+				    document.body.scrollTop = 0;
+				    document.documentElement.scrollTop = 0;
+				}
+			</script>
+
 			<footer class="container">
 			  	<div class="row">
 			  		<img id="logo" src="images/logo_black.png">
