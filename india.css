@@ -7,15 +7,6 @@
     background-size: cover;
 }
 
-body {
-
-}
-
-.info {
-	/*background-color: white;*/
-	padding: 50px 200px;
-}
-
 h1 {
 	color: white;
 	font-family: Impact;
@@ -40,22 +31,22 @@ h2 img {
 }
 
 #myBtn {
-    display: none;  Hidden by default 
-    position: fixed; 
-    bottom: 20px; 
-    right: 30px; 
-    z-index: 99; 
-    border: none; 
-    outline: none; 
-    background-color: black; 
-    color: white; 
-    cursor: pointer;
-    padding: 15px; 
-    border-radius: 10px; 
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
 }
 
 #myBtn:hover {
-    background-color: #555; 
+    background-color: #555; /* Add a dark-grey background on hover */
 }
 
 
@@ -64,14 +55,18 @@ h2 img {
 }
 
 .panel-default>.panel-heading {
-  color: #333;
-  background-color: #fff;
-  border-color: #e4e5e7;
+  color: white;
+  background-color: black;
+  border-color: black;
   padding: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.panel-default>.panel-heading:hover {
+	background-color: #16216a;
 }
 
 .panel-default>.panel-heading a {
@@ -96,7 +91,7 @@ h2 img {
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"] {
-  background-color: #eee;
+  background-color: black
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
@@ -109,6 +104,22 @@ h2 img {
   content: "\002b";
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.panel-default>.panel-collapse>.panel-body img {
+	display: block;
+    margin: auto;
+    width: auto;
+    height: 350px;
+	padding: 20px;
+}
+
+.panel-default>.panel-collapse>.panel-body p {
+	font-size: 20px;
+}
+
+.panel-default>.panel-heading>.panel-title {
+	font-size: 20px;
 }
 
 .accordion-option {
@@ -128,16 +139,26 @@ h2 img {
 
 .accordion-option .toggle-accordion {
   float: right;
-  font-size: 16px;
-  color: #6a6c6f;
+  font-size: 20px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .accordion-option .toggle-accordion:before {
-  content: "Expand All";
+  content: "Collapse All";
 }
 
 .accordion-option .toggle-accordion.active:before {
-  content: "Collapse All";
+  content: "Expand All";
+}
+
+footer {
+  margin-top: 50px;
+  padding: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  background: black;
+  height: auto;
 }
 
 footer {
@@ -152,7 +173,7 @@ footer {
 footer #logo {
   width: 200px;
   height: auto;
-  margin: 0 auto;
+  margin: auto;
   display: block;
 }
 
@@ -165,14 +186,16 @@ footer .col-sm-10 {
 
 footer ul {
   list-style: none; 
-  margin: 0 auto
-;  padding: 10px;
-  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+footer .col-sm-2 #social {
+	display:inline-block;
 }
 
 footer li img {
   width: 32px;
   height: 32px;
-  display: inline-block;
 }
 
