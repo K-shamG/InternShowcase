@@ -168,6 +168,7 @@ footer {
   max-width: 100%;
   background: black;
   height: auto;
+  text-align: center;
 }
 
 footer #logo {
@@ -180,22 +181,22 @@ footer #logo {
 footer .col-sm-10 {
   font-size: 20px; 
   color: white;
-  margin: 0 auto;
   text-align: center;
+  position: relative;
+  left: 7.5%;
 }
 
 footer ul {
   list-style: none; 
   margin: auto;
-  padding: 10px;
-}
-
-footer .col-sm-2 #social {
-	display:inline-block;
+  padding: 5px 0;
+  position: relative;
+  left: 42%;
 }
 
 footer li img {
   width: 32px;
   height: 32px;
 }
+
 
