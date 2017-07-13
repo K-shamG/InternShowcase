@@ -120,9 +120,9 @@ h2 img {
 
 .panel-default>.panel-collapse>.panel-body img {
 	display: block;
-    margin: auto;
-    width: auto;
-    height: 350px;
+  margin: auto;
+  width: auto;
+  height: 350px;
 	padding: 20px;
 }
 
