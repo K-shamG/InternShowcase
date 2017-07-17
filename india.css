@@ -9,7 +9,7 @@
 
 #home {
   justify-content: right; 
-  margin: 0 0 0 430px;
+  margin: 0 0 0 300px;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -18,12 +18,76 @@
   -webkit-filter: brightness(60%);
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #c8d9de;
+  padding-top: 200px;
+}
+
+.navbar-fixed-top .nav {
+    padding: 30px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 5px 0px;
+}
+
+.navbar-fixed-top .navbar-brand img{
+    height: 100px;
+    width: auto;
+}
+
+.navbar-fixed-top .navbar-header img{
+    height: 100px;
+    width: auto;
+}
+
+.nav.navbar-nav.navbar-right {
+    font-size: 20px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        /*padding: 15px 0;*/
+    }
+}
+
+header {
+  float: none;
+  display: inline-block;
+}
+
+header h1 {
+  font-weight: 400;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+header a {
+  color: white;
+  font-size: 22px;
+}
+
 h1 {
 	color: white;
 	font-family: Impact;
 	font-size: 40px;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	margin: 0 20px;
+	margin: 30px 0px 30px 400px;
   display: inline-block;
 }
 
@@ -63,7 +127,7 @@ h2 img {
 
 
 .container {
-  max-width: 960px;
+  max-width: 4000px;
 }
 
 .panel-default>.panel-heading {
