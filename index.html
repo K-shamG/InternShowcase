@@ -3,7 +3,7 @@
 	<head>
 		<title>GOAL 17</title>
 		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css }}" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
 		<script src="https://use.fontawesome.com/35264218fe.js"></script> <!-- for scroll up button -->
 		<link rel="stylesheet" type="text/css" href="main.css">
@@ -14,7 +14,7 @@
 				<div class="row">
 					<nav class="col-sm-8 text-left">
 						<a href="about.html"target="_blank" style="color:white"><p>About<p></a>
-						<a href="http://17goals.org/"target="_blank" style="color:white"><p>17Goals<p></a>
+						<a href="http://17goals.org/" target="_blank" style="color:white"><p>17Goals<p></a>
 						<a href="contact.html"style="color:white"><p>Contact</p></a>
 					</nav>
 				</div>
@@ -24,10 +24,10 @@
 			<section class="container">
 			    <h3>Step 1: Choose a goal</h3>
 				<div class="row">
-					<figure class="col-sm-3"><img src="images/goal1.jpg"/></figure>
-					<figure class="col-sm-3"><img src="images/goal2.jpg"/></figure>
-					<figure class="col-sm-3"><img src="images/goal3.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal4.jpg"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal1.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal2.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal3.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal4.jpg') }}"/></figure>
 					<figure class="col-sm-3">
 						<script type="text/javascript">
 							function scrollToMap() {
@@ -36,20 +36,20 @@
 								});
 							}
 						</script>
-					 	<img src="images/goal5.png" onclick="scrollToMap()"/>
+					 	<img src="{{ url_for('static', 'images/goal5.jpg') }}" onclick="scrollToMap()"/>
 					</figure>
-					<figure class="col-sm-3"><img src="images/goal6.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal7.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal8.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal9.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal10.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal11.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal12.png"/></figure>
-				    <figure class="col-sm-3"><img src="images/goal13.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal14.png"/></figure>
-					<figure class="col-sm-3"><img src="images/goal15.jpg"/></figure>
-					<figure class="col-sm-3"><img src="images/goal16.png"/></figure>
-				 </div> 
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal6.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal7.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal8.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal9.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal10.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal11.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal12.jpg') }}"/></figure>
+				  <figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal13.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal14.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal15.jpg') }}"/></figure>
+					<figure class="col-sm-3"><img src="{{ url_for('static', 'images/goal16.jpg') }}"/></figure>
+				 </div>
 			</section>
 			<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
 			<div id="map">
@@ -62,7 +62,7 @@
 					  	zoom: 2,
 					  	center: new google.maps.LatLng(10, 0),
 					  	//mapTypeId: google.maps.MapTypeId.ROADMAP
-					 	mapTypeId: google.maps.MapTypeId.SATELLITE 
+					 	mapTypeId: google.maps.MapTypeId.SATELLITE
 					};
 
 					// initialize the map
@@ -131,7 +131,7 @@
 					  ];
 
 						map.setOptions({styles: styles});
-						map.setOptions({minZoom: 1, maxZoom: 5}); 
+						map.setOptions({minZoom: 1, maxZoom: 5});
 
 						// Initialize JSONP request
 						var script = document.createElement('script');
@@ -181,7 +181,7 @@
 								});
 
 								country.setMap(map);
-						    } 
+						    }
 						}
 					}
 
@@ -198,8 +198,8 @@
 					google.maps.event.addDomListener(window, 'load', initialize);
 				</script>
 			</div>
-			<div id="map-canvas"></div>	
-			
+			<div id="map-canvas"></div>
+
 			<a onclick="topFunction()" id="myBtn" href="#">
 				<i class="fa fa-chevron-up" ></i>
 			</a>
@@ -223,8 +223,8 @@
 
 			<footer class="container">
 			  	<div class="row">
-			  		<img id="logo" src="images/logo_black.png">
-			  	</div>	
+			  		<img id="logo" src="{{ url_for('static', 'images/logo_black.png') }}">
+			  	</div>
 			  	<div class="row">
 			  		<p class="col-sm-10">&copy; 2017 Integra</p>
 				</div>
@@ -237,7 +237,7 @@
 				  		</li>
 				  		<li class="col-sm-3">
 							<a href="www.facebook.com"/>
-								<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">	
+								<img src="https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/facebook.svg">
 							</a>
 				  		</li>
 				  		<li class="col-sm-3">
