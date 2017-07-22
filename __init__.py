@@ -2,18 +2,18 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app_route('/')
+@app.route('/')
 def homepage():
     return render_template('index.html')
 
-@app_route('/india/')
+@app.route('/india/')
 def india():
     return render_templates('india.html')
 
-@app_route('/about/')
+@app.route('/about/')
 def about():
     return render_template('about.html')
 
 
-if name == '__main__':
+if __name__ == '__main__':
     app.run()
