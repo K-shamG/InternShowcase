@@ -1,5 +1,5 @@
 .parallax {
-    background-image: url("images/backgroun.jpg");
+    background-image: url("../images/background.jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -46,8 +46,8 @@ header a {
 .jumbotron {
   display: flex;
   align-items: center;
-  background-image: url('images/header.jpg'); 
-  background-size: auto; 
+  background-image: url('../images/header.jpg');
+  background-size: auto;
   background-repeat: no-repeat;
   color: black;
   height: 250px;
@@ -73,7 +73,7 @@ header a {
 /* Interested in helping */
 .container h3 {
 	font-family: Impact;
-	font-size: 35px; 
+	font-size: 35px;
 }
 
 /* 16 goal images */
@@ -85,7 +85,7 @@ section .row img {
 
 section .row img:hover
 {
-  -webkit-filter: brightness(60%); 
+  -webkit-filter: brightness(60%);
 }
 
 .col-md-6 {
@@ -96,13 +96,13 @@ section .row img:hover
 	font-family: Impact;
 	font-size: 35px;
 	padding: 0px 0px 50px 0px;
-	margin-top: 2000px; 
+	margin-top: 2000px;
 }
 
 #map-canvas {
 	height: 600px;
   width: 800px;
-	margin:0 auto; 
+	margin:0 auto;
 }
 
 #myBtn {
@@ -141,14 +141,14 @@ footer #logo {
 }
 
 footer .col-sm-10 {
-  font-size: 20px; 
+  font-size: 20px;
   color: white;
   margin: 0 auto;
   text-align: center;
 }
 
 footer ul {
-  list-style: none; 
+  list-style: none;
   margin: auto;
   padding: 10px;
 }
