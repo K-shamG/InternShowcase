@@ -8,7 +8,7 @@ def homepage():
 
 @app.route('/india/')
 def india():
-    return render_templates('india.html')
+    return render_template('india.html')
 
 @app.route('/about/')
 def about():
